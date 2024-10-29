@@ -9,7 +9,6 @@ const storageApi: StateStorage = {
       const data = await fetch(`${firebaseUrl}/${name}.json`).then((res) => {
         return res.json();
       });
-      console.log("data", data);
       return JSON.stringify(data);
     } catch (error) {
       throw new Error("Failed to fetch data from firebase");
